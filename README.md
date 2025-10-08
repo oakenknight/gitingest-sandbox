@@ -32,13 +32,6 @@ gitingesters run /path/to/project /path/to/output
 gitingesters run-url https://github.com/user/repo /path/to/output
 ```
 
-## Security Features
-
-- 🔒 **Network isolation** - No internet access for local files
-- 📁 **Read-only mounts** - Source code mounted as read-only
-- 🗑️ **Auto cleanup** - Removes containers after execution
-- ✅ **GitHub-only URLs** - Restricted network access for repositories
-
 ## Output
 
 Creates `digest.txt` in the output directory with LLM-friendly text content of your repository.

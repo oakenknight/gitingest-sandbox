@@ -1,0 +1,25 @@
+[package]
+name = "gitingesters"
+version = "0.1.0"
+edition = "2021"
+authors = ["Aleksandar Ignjatijevic <a.ignjatijevic@gmail.com>"]
+description = "A secure Rust CLI wrapper for gitingest local Docker workflow"
+readme = "README.md"
+homepage = "https://github.com/oakenknight/gitingest-sandbox"
+repository = "https://github.com/oakenknight/gitingest-sandbox"
+license = "MIT OR Apache-2.0"
+keywords = ["gitingest", "docker", "cli", "security", "git"]
+categories = ["command-line-utilities", "development-tools"]
+exclude = [
+    "target/",
+    "digest.txt",
+    "Dockerfile.gitingesters",
+    "*.log"
+]
+
+[[bin]]
+name = "gitingesters"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }

@@ -1,20 +1,44 @@
-# Gitingest Docker Runner
+# Gitingesters
 
-A simple Docker wrapper for running [gitingest](https://github.com/coderamp-labs/gitingest) to convert Git repositories into LLM-friendly text digests.
+A secure Rust CLI wrapper for [gitingest](https://github.com/coderamp-labs/gitingest) with Docker isolation and maximum security features.
+
+## Installation
+
+```bash
+cargo install gitingesters
+```
+
+Or from source:
+```bash
+git clone https://github.com/oakenknight/gitingest-sandbox.git
+cd gitingest-sandbox
+cargo install --path .
+```
 
 ## Usage
 
-1. Build the Docker image:
+### Build Docker image
+```bash
+gitingesters build
+```
 
-   ```bash
-   docker build -t gitingest-runner .
-   ```
+### Process local directory
+```bash
+gitingesters run /path/to/project /path/to/output
+```
 
-2. Run the script with a local directory or GitHub URL:
+### Process GitHub repository
+```bash
+gitingesters run-url https://github.com/user/repo /path/to/output
+```
 
-   ```bash
-   ./run-sandbox-gitingest.sh /path/to/your/project
-   ./run-sandbox-gitingest.sh https://github.com/user/repo
-   ```
+## Security Features
 
-The output will be saved as `digest.txt` in the same directory as your project (for local paths) or in the current directory (for GitHub URLs).
+- 🔒 **Network isolation** - No internet access for local files
+- 📁 **Read-only mounts** - Source code mounted as read-only
+- 🗑️ **Auto cleanup** - Removes containers after execution
+- ✅ **GitHub-only URLs** - Restricted network access for repositories
+
+## Output
+
+Creates `digest.txt` in the output directory with LLM-friendly text content of your repository.

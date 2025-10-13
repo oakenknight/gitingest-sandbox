@@ -34,4 +34,4 @@ gitingesters run-url https://github.com/user/repo /path/to/output
 
 ## Output
 
-Creates `digest.txt` in the output directory with LLM-friendly text content of your repository.
+Creates `digest.md` in the output directory with LLM-friendly text content of your repository.

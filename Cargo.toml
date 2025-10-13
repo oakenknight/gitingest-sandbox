@@ -12,7 +12,7 @@ keywords = ["gitingest", "docker", "cli", "security", "git"]
 categories = ["command-line-utilities", "development-tools"]
 exclude = [
     "target/",
-    "digest.txt",
+    "digest.md",
     "Dockerfile.gitingesters",
     "*.log"
 ]

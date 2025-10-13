@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir gitingest
 WORKDIR /data
 
 # Run gitingest on a provided path or URL
-ENTRYPOINT ["/bin/bash", "-c", "gitingest \"$1\" -o /output/digest.txt"]
+ENTRYPOINT ["/bin/bash", "-c", "gitingest \"$1\" -o /output/digest.md"]

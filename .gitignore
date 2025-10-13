@@ -12,5 +12,5 @@ Thumbs.db
 
 # Project specific
 Dockerfile.gitingesters
-digest.txt
+digest.md
 *.log

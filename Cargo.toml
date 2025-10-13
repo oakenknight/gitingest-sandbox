@@ -1,6 +1,6 @@
 [package]
 name = "gitingesters"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Aleksandar Ignjatijevic <a.ignjatijevic@gmail.com>"]
 description = "A secure Rust CLI wrapper for gitingest local Docker workflow"
